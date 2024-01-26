@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel TEXAS</title>
+    <link rel="stylesheet" href="hotel.css">
+    <script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.umd.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b8a58bc95c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
+</head>
+<body>
+    <header class="header" id="navigation-menu">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <img src="https://raw.githubusercontent.com/MichaelZhou334/Hotel-Landing-Page/main/images/logo.jpeg" alt="logo image">
+                </a>
+                <ul class="nav-menu">
+                    <li> <a href="#home" class="nav-list">Hotel</a> </li>
+                    <li> <a href="#destinations" class="nav-list">Destinasi</a> </li>
+                    <li> <a href="#offers" class="nav-list">Penawaran</a> </li>
+                    <li> <a href="#travel-experience" class="nav-list">Pengalaman Perjalanan</a> </li>
+                    <li> <a href="#meetings-events" class="nav-list">Pertemuan & Acara</a> </li>
+                </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+    <div class="location-ask">
+        <span class="MAU-KEMANA ?">MAU KEMANA?</span> <span class="required">(Yang Diperlukan) </span> <br />
+    <div class="booking">
+
+            <label class="location-label"></label>
+            <input type="text" class="location" placeholder="Kota, Negara, Lokasi, or Bandara" Yang Diperlukan>
+
+            <button type="submit" class="btn date" onclick="dateOpenPopup()">Tanggal</button>
+            <div class="date-popup" id="date-popup">
+                <h2>Pilih Tanggal</h2>
+                <input type="text" id="datepicker">
+                <button type="button" onclick="dateClosePopup()">OK</button>
+            </div>
+
+            <button type="submit" class="btn room" onclick="roomOpenPopup()">Kamar dan Tamu</button>
+            <div class="room-popup" id="room-popup">
+                <h2>Kamar dan Tamu</h2>
+                <div class="container-room">
+                <form>
+                    <label for="rooms">Kamar:</label>
+                    <input type="number" id="rooms" value=1><br><br>
+                    <label for="adults">Orang Dewasa:</label>
+                    <input type="number" id="adults" value=1><br><br>
+                    <label for="kids">Anak:</label>
+                    <input type="number" id="kids" value=0><br><br>
+                </form>
+                <button type="button" onclick="roomClosePopup()">OK</button>
+
+            </div>
+            </div>
+            <button type="submit" class="btn special-rates" onclick="ratesOpenPopup()">Tarif Khusus</button>
+            <div class="rates-popup" id="rates-popup">
+                <h2>Tarif Khusus</h2>
+                <form class="special-rates-checkbox">
+                    <label class="special-rates-checkbox">Gunakan Point
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="special-rates-checkbox">Agen Perjalanan
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="special-rates-checkbox">Tingkat SSS
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="special-rates-checkbox">Tarif SSA 
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="special-rates-checkbox">Tingkat Senior
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="special-rates-checkbox">Tingkat Pemerintah / Militer
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+
+                </form>
+                    <form class="special-rates-text">
+
+                        <label for="promotion-code">Kode Promo</label><br>
+                        <input type="text" id="promotion-code"><br><br>
+                        <label for="group-code">Kode Grup</label><br>
+                        <input type="text" id="group-code"><br><br>
+                        <label for="corporate-account">Akun Perusahaan</label><br>
+                        <input type="text" id="corporate-account"><br><br>
+
+                    </form>
+
+
+                <button type="button" onclick="ratesClosePopup()">OK</button>
+            </div>
+
+            <button type="submit" class="btn find-hotels">Menemukan hotel</button>
+
+    </div>
+
+    <div class="hotel-front-container">
+        <img src="hotel1.jpg" alt="hotel" class="hotel-front">
+       </div>
+
+       <div class="welcome-text">
+        <h2>Indonesia Indah</h2>
+        <p>Hotel indonesia ini memiliki beberapa fasilitas yang memadai,disertai pemandangan yang indah dan suasana yang nyaman</p>
+        <button class="btn">Explore More</button>
+       </div>
+
+       <div class="subheading">
+        <h2>Destinasi Yang Menyenangkan</h2>
+        <p>Berikut adalah perjalanan melalui beberapa tempat paling indah di Indonesia</p>
+       </div>
+
+       <div class="destinations-images">
+
+        <div class="country" id="italy-div">
+            <img src="hotel2.jpg" alt="semarang hotel" >
+            <div class="country-text" id="italy-text">Semarang</div>
+        </div>
+        <div class="country" id="portugal-div">
+            <img src="hotel3.jpg" alt="portugal hotel" >
+            <div class="country-text" id="portugal-text">Yogyakarta</div>
+        </div>
+        <div class="country" id="japan-div">
+            <img src="hotel4.jpg" alt="japan hotel" >
+            <div class="country-text" id="japan-text">Surabaya</div>
+        </div>
+        <div class="country" id="egypt-div">
+            <img src="hotel5.jpg" alt="egypt hotel" >
+            <div class="country-text" id="egypt-tegypt">Bali</div>
+        </div>
+       </div>
+
+       <divThe unknown beckons us, a class="subheading">
+        <h2>Mengalami sesuatu yang baru</h2>
+        <p>Hal yang tidak kita ketahui mengundang kita, dan imajinasi kita menjadi liar dengan berbagai kemungkinan</p>
+       </div>
+
+       <div class="experience-images">
+        <div class="experience" id="discount-div">
+            <img src="https://raw.githubusercontent.com/MichaelZhou334/Hotel-Landing-Page/main/images/discount.jpg" alt="discount picture" >
+            <div class="experience-text" id="discount-text">Pemberian diskon</div>
+        </div>
+        <div class="experience" id="points-div">
+            <img src="https://raw.githubusercontent.com/MichaelZhou334/Hotel-Landing-Page/main/images/points.jpg" alt="points picture" >
+            <div class="experience-text" id="points-text">Kalikan poin anda</div>
+        </div>
+        <div class="experience" id="parking-div">
+            <img src="https://raw.githubusercontent.com/MichaelZhou334/Hotel-Landing-Page/main/images/parking.jpg" alt="parking picture" >
+            <div class="experience-text" id="parking-text">Parkir & menginap</div>
+        </div>
+        <div class="experience" id="plan-div">
+            <img src="https://raw.githubusercontent.com/MichaelZhou334/Hotel-Landing-Page/main/images/plan.jpg" alt="plan picture" >
+            <div class="experience-text" id="plan-text">Merencanakan dan menyimpan</div>
+        </div>
+        <div class="experience" id="first-time-div">
+            <img src="https://raw.githubusercontent.com/MichaelZhou334/Hotel-Landing-Page/main/images/first-time.jpg" alt="first-time picture" >
+            <div class="experience-text" id="first-time-text">Diskon untuk pertama kali</div>
+        </div>
+        <div class="experience" id="members-div">
+            <img src="https://raw.githubusercontent.com/MichaelZhou334/Hotel-Landing-Page/main/images/front-desk.jpg" alt="members picture" >
+            <div class="experience-text" id="members-text">Langganan mendapatkan lebih banyak poin </div>
+        </div>
+       </div>
+
+       <div class="different-hotels">
+        <img src="https://raw.githubusercontent.com/MichaelZhou334/Hotel-Landing-Page/main/images/villa.jpg" alt="hotel front">
+        <div class="different-hotels-div">
+        <h2>Rumah dan Vila</h2>
+        <p>Rumah dan Vila dirancang untuk memberi wisatawan akses ke persewaan liburan kelas atas, seperti seluruh rumah, vila, dan akomodasi mewah. Platform ini menampilkan pilihan properti kelas atas dan unik yang dikurasi, dengan fitur arsitektur khas, pemandangan menakjubkan, atau fasilitas premium. Kami menawarkan layanan pramutamu tambahan, yang dapat mencakup pengalaman check-in yang dipersonalisasi, akses ke rekomendasi lokal, dan bantuan dalam perencanaan aktivitas dan reservasi makan..</p>
+        <button type="submit" class="btn">Bergabung secara gratis</button>
+    </div>
+    </div>
+
+    <div class="back-to-top">
+    <button onclick="topFunction()" class="btn"> ⬆ Kembali ke atas</button>
+    </div>
+
+  <hr class="footer-line">
+
+    <div class="footer">
+        <div class="col-1">
+            <div>
+            <h3>Apa yang bisa kami bantu?</h3>
+            <button class="btn">Meminta panggilan</button>
+            <div class="social-icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+
+            </div>
+
+        </div>
+        </div>
+        <div class="col-2">
+            <a href="#">Inspirasi perjalanan</a>
+            <a href="#">Penginapan ramah hewan peliharaan</a>
+            <a href="#">Kartu ucapan</a>
+            <a href="#">Pernyataan privasi global</a>
+         <a href="#">peta situs</a>
+            <a href="#">Perkembangan</a>
+            <a href="#">Media</a>
+            <a href="#">blog</a>
+            <a href="#">Web Accessibility</a>
+            <a href="#">Dukungan pelanggan</a>
+        </div>
+        <div class="col-3">
+            <a href="#">Pernyataan cookie</a>
+            <a href="#">Saluran telepon hotel</a>
+            <a href="#">Tanggung jawab perusahaan</a>
+            <a href="#">Hotel menghormati syarat dan ketentuan diskon</a>
+   
+            <a href="#">Jangan menjual informasi pribadi saya</a>
+            <a href="#">Permintaan data pribadi</a>
+            <a href="#">Perjanjian penggunaan situs</a>
+        </div>
+    </div>
+    <script src="hotel.js"></script>
+    </body>
+    </html>
